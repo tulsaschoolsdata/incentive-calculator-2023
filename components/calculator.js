@@ -38,7 +38,7 @@ const CHECKBOXES = [
   ],
   [
     'certified_secondary',
-    'Secondary certified math, science or foreign language teacher',
+    'Secondary certified math, science or world language teacher',
     state => state.status === 'new hire' && state.school_based_role === 'certified teacher',
   ],
   [
@@ -182,7 +182,7 @@ export default function Calculator({status, children}) {
               {state.school_based_role === 'certified teacher' && (<li>A certified teacher</li>)}
               {state.school_based_role === 'certified psychometrist' && (<li>A certified psychometrist, psychologist, occupational therapist, speech pathologist</li>)}
               {state.exceptional && (<li>Teach in an Exceptional Student Services role</li>)}
-              {state.certified_secondary && (<li>Secondary certified math, science or foreign language teacher</li>)}
+              {state.certified_secondary && (<li>Secondary certified math, science or world language teacher</li>)}
               {state.certified_sped && (<li>Certified special education</li>)}
               {state.parapro && (<li>Serving as a paraprofessional with a Level III or Level IV Parapro certification</li>)}
             </ul>
