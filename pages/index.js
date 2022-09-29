@@ -1,24 +1,16 @@
-import Head from 'next/head'
+import Link from 'next/link'
 
 export default function Home() {
+
   return (
     <>
-      <Head>
-        <title>Tulsa Public Schools - Retention Incentive Calculator</title>
-      </Head>
+      <h1 className={'text-center'}>Retention Incentive Calculator</h1>
 
-      <h1>Heading 1</h1>
-      <h2>Heading 2</h2>
-      <h3>Heading 3</h3>
-      <h4>Heading 4</h4>
-      <h5>Heading 5</h5>
-      <h6>Heading 6</h6>
-      <p>Paragraph</p>
-      <ul>
-        <li>List item</li>
-        <li>List item</li>
-        <li>List item</li>
-      </ul>
+      <div className={'flex justify-center space-x-2'}>
+        <Link href="/returning">
+          <button>Returning for 22-23</button>
+        </Link>
+      </div>
     </>
   )
 }

@@ -27,13 +27,40 @@ a {
   text-decoration: underline;
 }
 
+button {
+  @apply rounded-md;
+  @apply py-2;
+  @apply px-4;
+  @apply bg-blue-500;
+  @apply text-white;
+}
+button:hover {
+  @apply bg-blue-700;
+}
+button:disabled {
+  @apply opacity-50;
+  @apply pointer-events-none;
+}
+
 p, ul, ol, dl {
   margin: theme('spacing.4') 0;
 }
 
+ul {
+  @apply list-disc ml-6;
+}
+
+dt {
+  /* font-weight: theme('fontWeight.bold'); */
+  font-style: italic;
+}
+dd {
+  margin: theme('spacing.2') 0 theme('spacing.2') theme('spacing.4');
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: theme('fontWeight.bold');
-  margin: theme('spacing.4') 0;
+  margin-bottom: theme('spacing.4');
 }
 h1 {
   font-size: theme('fontSize.4xl')
@@ -52,4 +79,9 @@ h5 {
 }
 h6 {
   font-size: theme('fontSize.base')
+}
+
+.actions {
+  @apply flex flex-row-reverse space-x-2 space-x-reverse;
+  @apply border-t border-t-gray-200 py-4 my-4;
 }
