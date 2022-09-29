@@ -6,20 +6,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  color: theme('colors.black');
+  color: theme('colors.gray.800');
   background: theme('colors.white');
   min-width: 300px;
   line-height: theme('lineHeight.tight');
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  html, body {
-    color: theme('colors.white');
-    background: theme('colors.black');
-  }
 }
 
 a {
@@ -84,4 +74,18 @@ h6 {
 .actions {
   @apply flex flex-row-reverse space-x-2 space-x-reverse;
   @apply border-t border-t-gray-200 py-4 my-4;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  html, body {
+    color: theme('colors.white');
+    background: theme('colors.gray.800');
+  }
+
+  .actions {
+    @apply border-t-gray-600;
+  }
 }

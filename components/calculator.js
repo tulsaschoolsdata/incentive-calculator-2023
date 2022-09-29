@@ -198,7 +198,7 @@ export default function Calculator({status, children}) {
                   <li>One-time incentive, 5% of salary</li>
                 )}
               </ul>
-              <div className={'my-4 py-4 border-t border-black font-bold text-2xl text-center'}>
+              <div className={'my-4 py-4 border-t font-bold text-2xl text-center border-gray-800 dark:border-white'}>
                 {money(incentiveTotal)}{' '}total incentive{oneTimeIncentive && (' plus one-time 5% of salary incentive')}
               </div>
             </div>
