@@ -11,7 +11,7 @@ export default function Layout({ children }) {
       </Head>
 
       <header>
-        <div className={'w-24 mx-auto relative'}>
+        <div className={'mx-auto relative p-8 w-40'}>
           <Logo />
         </div>
       </header>

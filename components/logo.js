@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import ColorLogoImage from '../public/images/TPS_Color.png'
+import ColorLogoImage from '../public/images/tps-logo-color.svg'
 
 export default function Logo() {
   return (
