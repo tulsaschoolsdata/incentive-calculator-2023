@@ -143,7 +143,6 @@ export default function Calculator({status, children}) {
               <dl className={'text-xs'}>
                 <dt><Trans>certified teacher</Trans></dt>
                 <dd><Trans>certified teacher working in a school building</Trans></dd>
-                <dd><Trans>apprentice teachers are not eligible</Trans></dd>
                 <dt><Trans>support professional</Trans></dt>
                 <dd><Trans>teacher assistant, front office staff, paraprofessional, nurses, health assistants, custodial, child nutrition, before/after learning</Trans></dd>
               </dl>
