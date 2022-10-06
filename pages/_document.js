@@ -3,11 +3,12 @@ import i18nextConfig from '../next-i18next.config'
 
 export default function Document({__NEXT_DATA__}) {
   const lang = __NEXT_DATA__.query.locale || i18nextConfig.i18n.defaultLocale
+  const assetPrefix = __NEXT_DATA__.assetPrefix || ''
 
   return (
     <Html lang={lang}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={`${assetPrefix}/favicon.ico`} />
         <link rel="stylesheet" href="https://use.typekit.net/cfb7oxy.css" />
       </Head>
       <body>
