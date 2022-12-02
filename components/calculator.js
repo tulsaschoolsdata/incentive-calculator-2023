@@ -226,43 +226,43 @@ export default function Calculator({status, children}) {
                   {state.status === 'new hire' ? (
                     <tbody>
                       <tr>
-                        <th colSpan={5} className={'a'}>New Hire Incentive Payment Schedule</th>
+                        <th colSpan={5} className={'a'}><Trans>New Hire Incentive Payment Schedule</Trans></th>
                       </tr>
                       <tr>
-                        <th rowSpan={2}>New hire incentive, all staff</th>
-                        <th colSpan={2} className={'b'}>Working at FUSE site (J.H Franklin, Hawthorne, Central, Celia Clinton, Whitman)</th>
-                        <th rowSpan={2}>Special education incentive</th>
-                        <th rowSpan={2}>Bus driver, custodial, select CNS</th>
+                        <th rowSpan={2}><Trans>New hire incentive, all staff</Trans></th>
+                        <th colSpan={2} className={'b'}><Trans>Working at FUSE site (J.H Franklin, Hawthorne, Central, Celia Clinton, Whitman)</Trans></th>
+                        <th rowSpan={2}><Trans>Special education incentive</Trans></th>
+                        <th rowSpan={2}><Trans>Bus driver, custodial, select CNS</Trans></th>
                       </tr>
                       <tr>
-                        <th className={'c'}>Recruitment</th>
-                        <th className={'c'}>Completion</th>
+                        <th className={'c'}><Trans>Recruitment</Trans></th>
+                        <th className={'c'}><Trans>Completion</Trans></th>
                       </tr>
                       <tr>
-                        <td >December and March payment</td>
-                        <td className={'c'}>December and March payment</td>
-                        <td className={'c'}>June payment</td>
-                        <td >December and March payment</td>
-                        <td >December and March payment</td>
+                        <td><Trans>December and March payment</Trans></td>
+                        <td className={'c'}><Trans>December and March payment</Trans></td>
+                        <td className={'c'}><Trans>June payment</Trans></td>
+                        <td><Trans>December and March payment</Trans></td>
+                        <td><Trans>December and March payment</Trans></td>
                       </tr>
                     </tbody>
                   ) : (
                     <tbody>
                       <tr>
-                        <th colSpan={5} className={'a'}>Retention Incentive Payment Schedule</th>
+                        <th colSpan={5} className={'a'}><Trans>Retention Incentive Payment Schedule</Trans></th>
                       </tr>
                       <tr>
-                        <th rowSpan={2}>Retention incentive, all staff</th>
-                        <th colSpan={2} className={'b'}>Working at FUSE site (J.H Franklin, Hawthorne, Central, Celia Clinton, Whitman)</th>
+                        <th rowSpan={2}><Trans>Retention incentive, all staff</Trans></th>
+                        <th colSpan={2} className={'b'}><Trans>Working at FUSE site (J.H Franklin, Hawthorne, Central, Celia Clinton, Whitman)</Trans></th>
                       </tr>
                       <tr>
-                        <th className={'c'}>Recruitment</th>
-                        <th className={'c'}>Completion</th>
+                        <th className={'c'}><Trans>Recruitment</Trans></th>
+                        <th className={'c'}><Trans>Completion</Trans></th>
                       </tr>
                       <tr>
-                        <td >October and January payment</td>
-                        <td className={'c'}>December and March payment</td>
-                        <td className={'c'}>June payment</td>
+                        <td><Trans>October and January payment</Trans></td>
+                        <td className={'c'}><Trans>December and March payment</Trans></td>
+                        <td className={'c'}><Trans>June payment</Trans></td>
                       </tr>
                     </tbody>
                   )}

@@ -11,7 +11,7 @@ export default function NewHire() {
     <>
       <h1 className={'text-center'}><Trans>New Hire Incentive Calculator</Trans></h1>
 
-      <p><Trans>This calculator is for any new members of Team Tulsa. If you joined our team after June 30, we are talking to you! If you are a returning employee, please <Link href={'/returning'}>click here</Link> for a retention incentive calculator.</Trans></p>
+      <p className={'italic'}><Trans>This calculator is for any new members of Team Tulsa. If you joined our team after June 30, we are talking to you! If you are a returning employee, please <Link href={'/returning/'}>click here</Link> for a retention incentive calculator.</Trans></p>
 
       <Calculator status={'new hire'}>
         <p><Trans>This is designed to give you an estimate of the amount and timing of your recruitment incentive. It gives you a good general sense, but it is not designed to consider all special circumstances.</Trans></p>
