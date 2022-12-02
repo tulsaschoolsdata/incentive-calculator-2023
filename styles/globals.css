@@ -78,6 +78,10 @@ h6 {
   font-size: theme('fontSize.base')
 }
 
+label.disabled {
+  opacity: 0.5;
+}
+
 .actions {
   @apply flex flex-row-reverse space-x-2 space-x-reverse;
   @apply border-t border-t-gray-200 py-4 my-4;

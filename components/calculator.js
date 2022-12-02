@@ -7,7 +7,7 @@ function money(number) {
 }
 
 function Radio({input, children, ...props}) {
-  return <label><input type="radio" checked={input === props.value} {...props} /> {children}</label>
+  return <label className={props.disabled ? 'disabled' : undefined}><input type="radio" checked={input === props.value} {...props} /> {children}</label>
 }
 
 function RadioCheckbox({name, checked, onChange, children}) {
@@ -111,7 +111,9 @@ export default function Calculator({status, children}) {
             <div>
               <h5><Trans>Where do you work?</Trans></h5>
               <div><Radio input={state.contract} name="contract" value="school" onChange={changeHandler('contract')}> <Trans>School</Trans></Radio></div>
-              <div><Radio input={state.contract} name="contract" value="district-salary" onChange={changeHandler('contract')}> <Trans>District Administrative</Trans></Radio></div>
+              {state.status === 'returning' && (
+                <div><Radio input={state.contract} name="contract" value="district-salary" onChange={changeHandler('contract')}> <Trans>District Administrative</Trans></Radio></div>
+              )}
               <div><Radio input={state.contract} name="contract" value="district-hourly" onChange={changeHandler('contract')}> <Trans>District Operations</Trans></Radio></div>
 
               <p><Trans>What do each of these mean?</Trans></p>
@@ -122,12 +124,16 @@ export default function Calculator({status, children}) {
                 <dd>
                   <Trans>you report to a school site every day</Trans>
                 </dd>
-                <dt>
-                  <Trans>Working as a district administrator</Trans>
-                </dt>
-                <dd>
-                  <Trans>you work at the Education Service Center, Grant Building, Teaching and Learning, or Enrollment Center</Trans>
-                </dd>
+                {state.status === 'returning' && (
+                  <>
+                    <dt>
+                      <Trans>Working as a district administrator</Trans>
+                    </dt>
+                    <dd>
+                      <Trans>you work at the Education Service Center, Grant Building, Teaching and Learning, or Enrollment Center</Trans>
+                    </dd>
+                  </>
+                )}
                 <dt>
                   <Trans>Working in district operations</Trans>
                 </dt>
