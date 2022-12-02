@@ -1,10 +1,10 @@
 import React from 'react'
-import '../styles/globals.css'
-import Layout from '../components/layout'
+import '~/styles/globals.css'
+import Layout from '~/components/layout'
 
 import { appWithTranslation, useTranslation } from 'next-i18next'
-import nextI18nConfig from '../next-i18next.config'
-import Gtag from '../components/gtag'
+import nextI18nConfig from '~/next-i18next.config'
+import Gtag from '~/components/gtag'
 
 const GTAG_ID = process.env.NEXT_PUBLIC_GTAG_ID
 

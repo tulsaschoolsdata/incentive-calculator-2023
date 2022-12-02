@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import i18nextConfig from '../next-i18next.config'
+import i18nextConfig from '~/next-i18next.config'
 
 export default function Document({__NEXT_DATA__}) {
   const lang = __NEXT_DATA__.query.locale || i18nextConfig.i18n.defaultLocale

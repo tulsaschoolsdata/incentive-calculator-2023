@@ -1,6 +1,6 @@
 import React from 'react'
 import { Trans, useTranslation } from 'next-i18next'
-import { useIncentiveReducer } from '../lib/incentives'
+import { useIncentiveReducer } from '~/lib/incentives'
 
 function money(number) {
   return '$' + (new Intl.NumberFormat().format(number))
@@ -39,12 +39,12 @@ const CHECKBOXES = [
   ],
   [
     'certified_secondary',
-    'Secondary certified math, science or world language teacher',
+    'Are you a certified secondary math, science, or world language teacher who is teaching in that certification area this year?',
     state => state.status === 'new hire' && state.school_based_role === 'certified teacher',
   ],
   [
     'certified_sped',
-    'Certified special education',
+    'Are you a certified special education teacher who is teaching in a special education capacity this year?',
     state => state.status === 'new hire' && state.school_based_role === 'certified teacher',
   ],
   [
@@ -109,23 +109,30 @@ export default function Calculator({status, children}) {
 
           {state.status && (
             <div>
-              <h5><Trans>Do you work at a school site or a district site?</Trans></h5>
+              <h5><Trans>Where do you work?</Trans></h5>
               <div><Radio input={state.contract} name="contract" value="school" onChange={changeHandler('contract')}> <Trans>School</Trans></Radio></div>
               <div><Radio input={state.contract} name="contract" value="district-salary" onChange={changeHandler('contract')}> <Trans>District Administrative</Trans></Radio></div>
               <div><Radio input={state.contract} name="contract" value="district-hourly" onChange={changeHandler('contract')}> <Trans>District Operations</Trans></Radio></div>
 
+              <p><Trans>What do each of these mean?</Trans></p>
               <dl className={'text-xs'}>
-                <dt><Trans>school</Trans></dt>
+                <dt>
+                  <Trans>Working at a school</Trans>
+                </dt>
                 <dd>
-                  <Trans>If you report to a school site every day, we are talking about you!</Trans>
+                  <Trans>you report to a school site every day</Trans>
                 </dd>
-                <dt><Trans>district administrative</Trans></dt>
+                <dt>
+                  <Trans>Working as a district administrator</Trans>
+                </dt>
                 <dd>
-                  <Trans>Administrative staff who work at the Education Service Center, Grant Building, Wilson Teaching and Learning, or Enrollment Center.</Trans>
+                  <Trans>you work at the Education Service Center, Grant Building, Teaching and Learning, or Enrollment Center</Trans>
                 </dd>
-                <dt><Trans>district operations</Trans></dt>
+                <dt>
+                  <Trans>Working in district operations</Trans>
+                </dt>
                 <dd>
-                  <Trans>Operations and support professionals and administrative staff including facilities and plant operations, maintenance, grounds, child nutrition, transportation, or campus police.</Trans>
+                  <Trans>you work on the operations team or as a support professional including facilities, plant operations, maintenance, grounds, nutrition, transportation, or campus police.</Trans>
                 </dd>
               </dl>
             </div>
@@ -140,11 +147,12 @@ export default function Calculator({status, children}) {
               )}
               <div><Radio input={state.school_based_role} name="school_based_role" value="support staff" onChange={changeHandler('school_based_role')}> <Trans>Support professional</Trans></Radio></div>
 
+              <p><Trans>What do each of these mean?</Trans></p>
               <dl className={'text-xs'}>
-                <dt><Trans>certified teacher</Trans></dt>
-                <dd><Trans>certified teacher working in a school building</Trans></dd>
-                <dt><Trans>support professional</Trans></dt>
-                <dd><Trans>teacher assistant, front office staff, paraprofessional, nurses, health assistants, custodial, child nutrition, before/after learning</Trans></dd>
+                <dt><Trans>Certified teacher</Trans></dt>
+                <dd><Trans>you are a permanent or emergency-certified teacher serving in a student facing role (teacher, librarian, dean, etc)</Trans></dd>
+                <dt><Trans>Support professional</Trans></dt>
+                <dd><Trans>you are a support professional serving the students, families, or staff of a school including teacher assistants, paraprofessional, front office staff, health assistants, custodial, child nutrition, and before and after learning staff</Trans></dd>
               </dl>
             </div>
           )}
@@ -210,6 +218,61 @@ export default function Calculator({status, children}) {
           <div className={'actions'}>
             <button onClick={startOver}><Trans>Start Over</Trans></button>
           </div>
+
+          {(incentiveTotal || oneTimeIncentive) && (
+            <>
+              <div className={'payment-schedule'}>
+                <table>
+                  {state.status === 'new hire' ? (
+                    <tbody>
+                      <tr>
+                        <th colSpan={5} className={'a'}><Trans>New Hire Incentive Payment Schedule</Trans></th>
+                      </tr>
+                      <tr>
+                        <th rowSpan={2}><Trans>New hire incentive, all staff</Trans></th>
+                        <th colSpan={2} className={'b'}><Trans>Working at FUSE site (J.H Franklin, Hawthorne, Central, Celia Clinton, Whitman)</Trans></th>
+                        <th rowSpan={2}><Trans>Special education incentive</Trans></th>
+                        <th rowSpan={2}><Trans>Bus driver, custodial, select CNS</Trans></th>
+                      </tr>
+                      <tr>
+                        <th className={'c'}><Trans>Recruitment</Trans></th>
+                        <th className={'c'}><Trans>Completion</Trans></th>
+                      </tr>
+                      <tr>
+                        <td><Trans>December and March payment</Trans></td>
+                        <td className={'c'}><Trans>December and March payment</Trans></td>
+                        <td className={'c'}><Trans>June payment</Trans></td>
+                        <td><Trans>December and March payment</Trans></td>
+                        <td><Trans>December and March payment</Trans></td>
+                      </tr>
+                    </tbody>
+                  ) : (
+                    <tbody>
+                      <tr>
+                        <th colSpan={5} className={'a'}><Trans>Retention Incentive Payment Schedule</Trans></th>
+                      </tr>
+                      <tr>
+                        <th rowSpan={2}><Trans>Retention incentive, all staff</Trans></th>
+                        <th colSpan={2} className={'b'}><Trans>Working at FUSE site (J.H Franklin, Hawthorne, Central, Celia Clinton, Whitman)</Trans></th>
+                      </tr>
+                      <tr>
+                        <th className={'c'}><Trans>Recruitment</Trans></th>
+                        <th className={'c'}><Trans>Completion</Trans></th>
+                      </tr>
+                      <tr>
+                        <td><Trans>October and January payment</Trans></td>
+                        <td className={'c'}><Trans>December and March payment</Trans></td>
+                        <td className={'c'}><Trans>June payment</Trans></td>
+                      </tr>
+                    </tbody>
+                  )}
+
+                </table>
+
+              </div>
+              <p><Trans>We are providing this calculator to help you get answers to important questions about your incentives quickly and easily. The district reserves the right to calculate and pay all incentives according to district-managed procedures. The results of use of the calculator are not binding on the district.</Trans></p>
+            </>
+          )}
         </div>
       )}
     </>

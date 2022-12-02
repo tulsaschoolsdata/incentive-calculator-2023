@@ -1,7 +1,7 @@
-import languageDetector from '../lib/language-detector'
+import languageDetector from '~/lib/language-detector'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { i18n } from '../next-i18next.config'
+import { i18n } from '~/next-i18next.config'
 
 const locale_r = new RegExp(`^/(?:${i18n.locales.join('|')})/`)
 

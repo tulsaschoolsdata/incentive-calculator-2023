@@ -83,6 +83,27 @@ h6 {
   @apply border-t border-t-gray-200 py-4 my-4;
 }
 
+.payment-schedule {
+  overflow-x: auto;
+}
+.payment-schedule table td ,
+.payment-schedule table th {
+  border: 1px solid theme('colors.black');;
+  padding: 0.5em;
+  text-align: center;
+  vertical-align: top;
+}
+.payment-schedule table .a {
+  background: theme('colors.blue.800');
+  color: theme('colors.white');
+}
+.payment-schedule table .b {
+  background: theme('colors.blue.300');
+}
+.payment-schedule table .c {
+  background: theme('colors.blue.200');
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -94,5 +115,20 @@ h6 {
 
   .actions {
     @apply border-t-gray-600;
+  }
+
+  .payment-schedule table td ,
+  .payment-schedule table th {
+    border: 1px solid theme('colors.white');
+  }
+  .payment-schedule table .a {
+    background: theme('colors.gray.400');
+    color: theme('colors.white');
+  }
+  .payment-schedule table .b {
+    background: theme('colors.gray.500');
+  }
+  .payment-schedule table .c {
+    background: theme('colors.gray.700');
   }
 }

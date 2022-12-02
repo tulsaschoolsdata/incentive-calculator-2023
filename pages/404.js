@@ -1,4 +1,4 @@
-import { useLanguageRedirect } from '../lib/language-redirect'
+import { useLanguageRedirect } from '~/lib/language-redirect'
 
 export default function Custom404() {
   useLanguageRedirect()
