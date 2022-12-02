@@ -220,38 +220,58 @@ export default function Calculator({status, children}) {
           </div>
 
           {(incentiveTotal || oneTimeIncentive) && (
-            <div>
-              <table className={'payment-schedule'}>
-                <tbody>
-                  <tr>
-                    <th colSpan={5} className={'a'}>New Hire Incentive Payment Schedule</th>
-                  </tr>
-                  <tr>
-                    <th rowSpan={2} className={'text-left'}>New hire incentive, all staff</th>
-                    <th colSpan={2} className={'b'}>Working at FUSE site (J.H Franklin, Hawthorne, Central, Celia Clinton, Whitman)</th>
-                    {/* <th></th> */}
-                    <th rowSpan={2} className={'text-left'}>Special education incentive</th>
-                    <th rowSpan={2} className={'text-left'}>Bus driver, custodial, select CNS</th>
-                  </tr>
-                  <tr>
-                    {/* <th></th> */}
-                    <th className={'c text-left'}>Recruitment</th>
-                    <th className={'c text-left'}>Completion</th>
-                    {/* <th></th> */}
-                    {/* <th></th> */}
-                  </tr>
-                  <tr>
-                    <td>December and March payment</td>
-                    <td className={'c'}>December and March payment</td>
-                    <td className={'c'}>June payment</td>
-                    <td>December and March payment</td>
-                    <td>December and March payment</td>
-                  </tr>
-                </tbody>
-              </table>
+            <>
+              <div className={'payment-schedule'}>
+                <table>
+                  {state.status === 'new hire' ? (
+                    <tbody>
+                      <tr>
+                        <th colSpan={5} className={'a'}>New Hire Incentive Payment Schedule</th>
+                      </tr>
+                      <tr>
+                        <th rowSpan={2}>New hire incentive, all staff</th>
+                        <th colSpan={2} className={'b'}>Working at FUSE site (J.H Franklin, Hawthorne, Central, Celia Clinton, Whitman)</th>
+                        <th rowSpan={2}>Special education incentive</th>
+                        <th rowSpan={2}>Bus driver, custodial, select CNS</th>
+                      </tr>
+                      <tr>
+                        <th className={'c'}>Recruitment</th>
+                        <th className={'c'}>Completion</th>
+                      </tr>
+                      <tr>
+                        <td >December and March payment</td>
+                        <td className={'c'}>December and March payment</td>
+                        <td className={'c'}>June payment</td>
+                        <td >December and March payment</td>
+                        <td >December and March payment</td>
+                      </tr>
+                    </tbody>
+                  ) : (
+                    <tbody>
+                      <tr>
+                        <th colSpan={5} className={'a'}>Retention Incentive Payment Schedule</th>
+                      </tr>
+                      <tr>
+                        <th rowSpan={2}>Retention incentive, all staff</th>
+                        <th colSpan={2} className={'b'}>Working at FUSE site (J.H Franklin, Hawthorne, Central, Celia Clinton, Whitman)</th>
+                      </tr>
+                      <tr>
+                        <th className={'c'}>Recruitment</th>
+                        <th className={'c'}>Completion</th>
+                      </tr>
+                      <tr>
+                        <td >October and January payment</td>
+                        <td className={'c'}>December and March payment</td>
+                        <td className={'c'}>June payment</td>
+                      </tr>
+                    </tbody>
+                  )}
 
+                </table>
+
+              </div>
               <p><Trans>We are providing this calculator to help you get answers to important questions about your incentives quickly and easily. The district reserves the right to calculate and pay all incentives according to district-managed procedures. The results of use of the calculator are not binding on the district.</Trans></p>
-            </div>
+            </>
           )}
         </div>
       )}
