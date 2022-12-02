@@ -11,7 +11,7 @@ export default function Returning() {
     <>
       <h1 className={'text-center'}><Trans>Retention Incentive Calculator</Trans></h1>
 
-      <p className={'italic'}><Trans>This calculator is for returning employees of Team Tulsa. If you joined our team before June 30, we are talking to you! If you are a new employee, please <Link href={'/new-hire/'}>click here</Link> for a new hire incentive calculator.</Trans></p>
+      <p className={'italic'}><Trans>This calculator is for returning employees of Team Tulsa. If you joined our team on or before June 30, we are talking to you! If you are a new employee, please <Link href={'/new-hire/'}>click here</Link> for a new hire incentive calculator.</Trans></p>
 
       <Calculator status={'returning'}>
         <p><Trans>Last spring, we announced a plan to pay all members of Team TPS a retention incentive for returning for the 2022-2023 school year. Nearly 95% of staff who committed to returning to Team Tulsa are still with us this school year. Thank you! This summer, we partnered with AFT and TCTA to finalize the details of a new compensation package. This negotiations included the retention incentive.</Trans></p>
