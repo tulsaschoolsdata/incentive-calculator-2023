@@ -1,6 +1,6 @@
 import React from 'react'
 import { Trans, useTranslation } from 'next-i18next'
-import { useIncentiveReducer } from '../lib/incentives'
+import { useIncentiveReducer } from '~/lib/incentives'
 
 function money(number) {
   return '$' + (new Intl.NumberFormat().format(number))

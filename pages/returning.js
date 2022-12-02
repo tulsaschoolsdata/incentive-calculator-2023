@@ -1,2 +1,2 @@
-import { LanguageRedirect } from '../lib/language-redirect'
+import { LanguageRedirect } from '~/lib/language-redirect'
 export default LanguageRedirect

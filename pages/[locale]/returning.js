@@ -1,7 +1,7 @@
-import Calculator from '../../components/calculator'
-import { Trans } from 'next-i18next';
+import Calculator from '~/components/calculator'
+import { Trans } from 'next-i18next'
 
-import { getStaticPaths, makeStaticProps } from '../../lib/get-static'
+import { getStaticPaths, makeStaticProps } from '~/lib/get-static'
 const getStaticProps = makeStaticProps()
 export { getStaticPaths, getStaticProps }
 

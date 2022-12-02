@@ -1,6 +1,6 @@
-import Calculator from '../../components/calculator'
+import Calculator from '~/components/calculator'
 
-import { getStaticPaths, makeStaticProps } from '../../lib/get-static'
+import { getStaticPaths, makeStaticProps } from '~/lib/get-static'
 const getStaticProps = makeStaticProps()
 export { getStaticPaths, getStaticProps }
 

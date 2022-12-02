@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import Logo from './logo'
 import { useTranslation } from 'next-i18next'
 import LanguageLink from './language-link'
-import { i18n } from '../next-i18next.config'
+import { i18n } from '~/next-i18next.config'
 
 export default function Layout({ children }) {
   const router = useRouter()
