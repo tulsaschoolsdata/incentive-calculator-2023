@@ -109,23 +109,24 @@ export default function Calculator({status, children}) {
 
           {state.status && (
             <div>
-              <h5><Trans>Do you work at a school site or a district site?</Trans></h5>
+              <h5><Trans>Where do you work?</Trans></h5>
               <div><Radio input={state.contract} name="contract" value="school" onChange={changeHandler('contract')}> <Trans>School</Trans></Radio></div>
               <div><Radio input={state.contract} name="contract" value="district-salary" onChange={changeHandler('contract')}> <Trans>District Administrative</Trans></Radio></div>
               <div><Radio input={state.contract} name="contract" value="district-hourly" onChange={changeHandler('contract')}> <Trans>District Operations</Trans></Radio></div>
 
+              <p><Trans>What do each of these mean?</Trans></p>
               <dl className={'text-xs'}>
-                <dt><Trans>school</Trans></dt>
+                <dt><Trans>Working at a school</Trans></dt>
                 <dd>
-                  <Trans>If you report to a school site every day, we are talking about you!</Trans>
+                  <Trans>you report to a school site every day</Trans>
                 </dd>
-                <dt><Trans>district administrative</Trans></dt>
+                <dt><Trans>Working as a district administrator</Trans></dt>
                 <dd>
-                  <Trans>Administrative staff who work at the Education Service Center, Grant Building, Wilson Teaching and Learning, or Enrollment Center.</Trans>
+                  <Trans>you work at the Education Service Center, Grant Building, Teaching and Learning, or Enrollment Center</Trans>
                 </dd>
-                <dt><Trans>district operations</Trans></dt>
+                <dt><Trans>Working in district operations</Trans></dt>
                 <dd>
-                  <Trans>Operations and support professionals and administrative staff including facilities and plant operations, maintenance, grounds, child nutrition, transportation, or campus police.</Trans>
+                  <Trans>you work on the operations team or as a support professional including facilities, plant operations, maintenance, grounds, nutrition, transportation, or campus police.</Trans>
                 </dd>
               </dl>
             </div>
