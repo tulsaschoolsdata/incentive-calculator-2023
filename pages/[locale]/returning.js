@@ -17,7 +17,7 @@ export default function Returning() {
         <p><Trans>Last spring, we announced a plan to pay all members of Team TPS a retention incentive for returning for the 2022-2023 school year. Nearly 95% of staff who committed to returning to Team Tulsa are still with us this school year. Thank you! This summer, we partnered with AFT and TCTA to finalize the details of a new compensation package. This negotiations included the retention incentive.</Trans></p>
         <p><Trans>This calculator is designed to give you an estimate of the amount and timing of your retention incentive. It gives you a good general sense, but it is not designed to consider all special circumstances.</Trans></p>
         <p><Trans>It <b>does</b> include information about all one-time incentives rewarding staff who were employed during the 2021-2022 school year and returned for the 2022-2023 school year.</Trans></p>
-        <p><Trans>It <b>does not</b> include:</Trans></p>
+        <p><Trans>It <b>does not</b> include</Trans>:</p>
         <ul>
           <li><Trans>special circumstances such as employees on leave, part time employees, and employees who leave during the school year;</Trans></li>
           <li><Trans>other forms of compensation such as special duty stipends or routine raises;</Trans></li>

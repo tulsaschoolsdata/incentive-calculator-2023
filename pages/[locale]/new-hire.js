@@ -17,7 +17,7 @@ export default function NewHire() {
         <p><Trans>This is designed to give you an estimate of the amount and timing of your recruitment incentive. It gives you a good general sense, but it is not designed to consider all special circumstances.</Trans></p>
         <p><Trans>We are offering this as a fast and easy way to understand your likely new hire incentive. It gives you a good general sense, but it is not designed to consider all special circumstances.</Trans></p>
         <p><Trans>It <b>does</b> include information about all one-time recruitment incentives rewarding staff who joined Team Tulsa during 2022-2023 school year.</Trans></p>
-        <p><Trans>It <b>does not</b> include:</Trans></p>
+        <p><Trans>It <b>does not</b> include</Trans>:</p>
         <ul>
           <li><Trans>special circumstances such as employees on leave, part time employees, and employees who leave during the school year;</Trans></li>
           <li><Trans>other forms of compensation such as special duty stipends or routine raises;</Trans></li>
