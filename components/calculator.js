@@ -236,7 +236,7 @@ export default function Calculator({status, children}) {
                       </tr>
                       <tr>
                         <th rowSpan={2}><Trans>New hire incentive, all staff</Trans></th>
-                        <th colSpan={2} className={'b'}><Trans>Working at FUSE site (J.H Franklin, Hawthorne, Central, Celia Clinton, Whitman)</Trans></th>
+                        <th colSpan={2} className={'b'}><Trans>Working at FUSE site (J. H. Franklin, Hawthorne, Central, Celia Clinton, Whitman)</Trans></th>
                         <th rowSpan={2}><Trans>Special education incentive</Trans></th>
                         <th rowSpan={2}><Trans>Bus driver, custodial, select CNS</Trans></th>
                       </tr>
@@ -259,7 +259,7 @@ export default function Calculator({status, children}) {
                       </tr>
                       <tr>
                         <th rowSpan={2}><Trans>Retention incentive, all staff</Trans></th>
-                        <th colSpan={2} className={'b'}><Trans>Working at FUSE site (J.H Franklin, Hawthorne, Central, Celia Clinton, Whitman)</Trans></th>
+                        <th colSpan={2} className={'b'}><Trans>Working at FUSE site (J. H. Franklin, Hawthorne, Central, Celia Clinton, Whitman)</Trans></th>
                       </tr>
                       <tr>
                         <th className={'c'}><Trans>Recruitment</Trans></th>
