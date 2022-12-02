@@ -116,15 +116,21 @@ export default function Calculator({status, children}) {
 
               <p><Trans>What do each of these mean?</Trans></p>
               <dl className={'text-xs'}>
-                <dt><Trans>Working at a school</Trans></dt>
+                <dt>
+                  <Trans>Working at a school</Trans>
+                </dt>
                 <dd>
                   <Trans>you report to a school site every day</Trans>
                 </dd>
-                <dt><Trans>Working as a district administrator</Trans></dt>
+                <dt>
+                  <Trans>Working as a district administrator</Trans>
+                </dt>
                 <dd>
                   <Trans>you work at the Education Service Center, Grant Building, Teaching and Learning, or Enrollment Center</Trans>
                 </dd>
-                <dt><Trans>Working in district operations</Trans></dt>
+                <dt>
+                  <Trans>Working in district operations</Trans>
+                </dt>
                 <dd>
                   <Trans>you work on the operations team or as a support professional including facilities, plant operations, maintenance, grounds, nutrition, transportation, or campus police.</Trans>
                 </dd>
@@ -141,11 +147,12 @@ export default function Calculator({status, children}) {
               )}
               <div><Radio input={state.school_based_role} name="school_based_role" value="support staff" onChange={changeHandler('school_based_role')}> <Trans>Support professional</Trans></Radio></div>
 
+              <p><Trans>What do each of these mean?</Trans></p>
               <dl className={'text-xs'}>
-                <dt><Trans>certified teacher</Trans></dt>
-                <dd><Trans>certified teacher working in a school building</Trans></dd>
-                <dt><Trans>support professional</Trans></dt>
-                <dd><Trans>teacher assistant, front office staff, paraprofessional, nurses, health assistants, custodial, child nutrition, before/after learning</Trans></dd>
+                <dt><Trans>Certified teacher</Trans></dt>
+                <dd><Trans>you are a permanent or emergency-certified teacher serving in a student facing role (teacher, librarian, dean, etc)</Trans></dd>
+                <dt><Trans>Support professional</Trans></dt>
+                <dd><Trans>you are a support professional serving the students, families, or staff of a school including teacher assistants, paraprofessional, front office staff, health assistants, custodial, child nutrition, and before and after learning staff</Trans></dd>
               </dl>
             </div>
           )}
